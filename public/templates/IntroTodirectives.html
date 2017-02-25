@@ -1,0 +1,15 @@
+<div class="col-sm-9">
+ 	<h2> Tutorial No:3   <small> (Directives and Expression)</small></h2> 
+    <h4>Output:1<small>use of ng-init:Directive</small></h4>
+    <div style="border: solid black 2px; padding: 15px">
+
+        <div ng-init="language='AngularJS'">
+        Your Prefered Langauge:<input type="text" ng-model="language">{{language}}
+        </div>
+        
+    </div>
+    	<br><br>
+    	<h4>Output:2 <small>With TextArea</small></h4>
+  		<textarea ng-model="language" ></textarea>
+  		<div ng-bind="language"></div> 
+ </div>

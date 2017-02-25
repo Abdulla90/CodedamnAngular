@@ -1,0 +1,15 @@
+<div class="col-sm-9">
+     		<h2> Tutorial No:4   <small> (ng-repeat)</small> 
+        </h2> 
+        <h4>Output:</h4>
+        <div style="border: solid black 2px; padding: 15px">
+       <div ng-init="myFavLan=[{name:'PHP',extension:'.php'},
+       							{name:'JavaScript',extension:'.js'},
+       							{name:'Ruby',extension:'rb'},
+       							{name:'C++',extension:'.cpp'}]">
+       		<div ng-repeat="lan in myFavLan">
+       			Name:{{lan.name}}<br>
+       			Extension:{{lan.extension}}<br>
+       		</div>					
+        </div>
+</div>

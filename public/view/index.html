@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS | Welcome!</title>
+	<script src="/js/lib/angular.js" ></script>
+	<script src="/js/app.js" ></script>
+	<script src="/js/lib/jquery-3.1.1.min.js" type="text/javascript"></script>
+	<script  src="/js/controller/indexController.js" type="text/javascript"></script>
+ 
+	<script src="/js/lib/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/js/lib/angular-route.js" type="text/javascript"></script>
+	<link  href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" >
+	<link  href="/css/main.css" rel="stylesheet" type="text/css">
+	<script src="/js/router/routes.js" type="text/javascript"></script>
+  <script src="/js/directives/fileUploadDirective.js" stype="text/javascript"></script>
+	
+</head>
+<body ng-app="myApp">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Angular Demo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+  <!--       <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+        <li><a href="#contact">CONTACT</a></li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+    <div class="row content">
+    <div class="col-sm-3 sidenav">
+          <h4>Angular Tutorials List</h4>
+          <div ng-controller="indexContrl">
+          <ul  ng-repeat="bookmark in bookmarks">
+          <li><a href={{bookmark.url}}>{{bookmark.title}}</a></li>
+          </ul><br>
+          </div>
+      </div>
+<div ng-view>
+	
+</div>
+</div>
+</div>
+
+</body>
+</html>
